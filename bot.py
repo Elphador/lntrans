@@ -18,7 +18,7 @@ app = Client(
 
 @app.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
-	await message.reply_text(text =f"ሰላም😊 **{message.from_user.first_name }** \n\n እኔ😷 የተለያየ ቋንቋ መተርጎምያ ቦት ነኝ \n የፈለጉትን ቋንቋ Text ወደ መረጡት ቋንቋ ተረጉማለዉ😎__",reply_to_message_id = message.message_id ,parse_mode="markdown", reply_markup=InlineKeyboardMarkup([ [                    InlineKeyboardButton("JOIN The Bot CHANNEL" ,url="https://t.me/spoken99") ],               [InlineKeyboardButton("FEEDBACK ", url="https://t.me/elphador_bot") ]   ]  ) )
+	await message.reply_text(text =f"ሰላም😊 **{message.from_user.first_name }** \n\n እኔ😷 የተለያየ ቋንቋ መተርጎምያ ቦት ነኝ \n የፈለጉትን ቋንቋ Text ወደ መረጡት ቋንቋ ተረጉማለዉ😎__",reply_to_message_id = message_id ,parse_mode="markdown", reply_markup=InlineKeyboardMarkup([ [                    InlineKeyboardButton("JOIN The Bot CHANNEL" ,url="https://t.me/spoken99") ],               [InlineKeyboardButton("FEEDBACK ", url="https://t.me/elphador_bot") ]   ]  ) )
                   
 
 
