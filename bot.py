@@ -18,9 +18,8 @@ app = Client(
     )
 force_channel = os.environ.get("FORCE_SUB", "Link without @"
 
-
-app.on_message (filters.private & filters.text)
-      async def start_cmd (bot, msg):
+@app.on_message (filters.private & filters.text)
+      async def start_cmd(bot, msg):
           if force_channel:
             try:
               user = await bot.get_chat_member(force_channel, msg.from_use.id)
