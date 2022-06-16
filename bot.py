@@ -19,15 +19,15 @@ app = Client(
 force_channel = os.environ.get("FORCE_SUB", "Link without @"
 
 @app.on_message (filters.private & filters.text)
-      async def start_cmd(bot, msg):
+      async def start(bot, message):
           if force_channel:
             try:
-              user = await bot.get_chat_member(force_channel, msg.from_use.id)
+              user = await bot.get_chat_member(force_channel, message.from_use.id)
               if user.statu == "kicked out ":
-                  await msg.reply_text ("Your are baned contact @elphador_bot to unban youeself ")
+                  await message.reply_text ("Your are baned contact @elphador_bot to unban yourself ")
                   return 
             expect UserNotParticipant:
-              await msg.reply_text (
+              await message.reply_text (
                   text = " You have to Join My Channel to Use me " , teply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join My Channel😈 , url=f"t.me/{force_channel}"
                     )
                      ]]
