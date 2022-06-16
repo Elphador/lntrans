@@ -7,6 +7,9 @@
         "TOKEN": {
             "description": "Your Bot token from @Botfather"
         },
+        "FORCE_SUB": {
+            "description": "channel to Force Subscribe"
+            },
         "API_ID": {
             "description": "Your API_ID from https://my.telegram.org/apps"
         },
