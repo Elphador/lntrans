@@ -1,6 +1,6 @@
 import os
 from pyrogram import Client, filters
-from pyrogram.errors UserNotPraticipant
+from pyrogram.errors import UserNotPraticipant
 from pyrogram.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup
