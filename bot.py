@@ -16,25 +16,6 @@ app = Client(
         bot_token=TOKEN,api_hash=API_HASH,
             api_id=API_ID
     )
-force_channel = os.environ.get("FORCE_SUB", "Link without @"
-
-@app.on_message (filters.private & filters.text)
-async def start(bot, message):
-          if force_channel:
-            try:
-              user = await bot.get_chat_member(force_channel, message.from_use.id)
-              if user.statu == "kicked out ":
-                  await message.reply_text ("Your are baned contact @elphador_bot to unban yourself ")
-                  return 
-            expect UserNotParticipant:
-              await message.reply_text (
-                  text = " You have to Join My Channel to Use me " , teply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join My Channel😈 , url=f"t.me/{force_channel}"
-                    )
-                     ]]
-                    )
-                  )
-                  return
-
 @app.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
 	await message.reply_text(text =f"ሰላም😊 **{message.from_user.first_name }** \n\n እኔ😷 የተለያየ ቋንቋ መተርጎምያ ቦት ነኝ \n የፈለጉትን ቋንቋ Text ወደ መረጡት ቋንቋ ተረጉማለዉ😎__",reply_to_message_id = message.id , reply_markup=InlineKeyboardMarkup([ [                    InlineKeyboardButton("JOIN The Bot CHANNEL" ,url="https://t.me/spoken99") ],               [InlineKeyboardButton("FEEDBACK ", url="https://t.me/elphador_bot") ]   ]  ) )
